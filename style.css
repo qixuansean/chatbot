@@ -1,0 +1,227 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("/resources/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("/resources/fonts/Quicksand.ttf");
+}
+
+body {
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    margin: 0;
+    background-color: #ff0000;
+}
+
+.container {
+    width: 450px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #f0d43a;
+    text-shadow: 0 3px 0 #2c2c2c;
+    font-family: "Quicksand", sans-serif;
+}
+
+#message {
+    position: relative;
+    background: #ffffff;
+    color: #2d2d2d;
+    text-align: center;
+    width: 320px;
+    /* height: 120px; */
+    border-radius: 7px;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    margin: 0 auto 30px;
+}
+
+#message:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: #ffffff transparent;
+    border-width: 20px 20px 0;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+@keyframes headAnim {
+    0% {
+        transform: scaleX(1) scaleY(1);
+    }
+    100% {
+        transform: scaleX(0.95) scaleY(1.05);
+    }
+}
+
+@keyframes eyesAnim {
+    0% {
+        transform: scaleY(1);
+    }
+    40% {
+        transform: scaleY(1);
+    }
+    45% {
+        transform: scaleY(0);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+    90% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+#head {
+    position: relative;
+    background-color: #D0D3D4;
+    width: 140px;
+    height: 100px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0 auto 20px;
+    animation-name: headAnim;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#head:after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 6px;
+    border-top: 3px solid #34495E;
+    border-bottom: 3px solid #34495E;
+    position: absolute;
+    top: 80px;
+    left: 5px;
+}
+
+#head #eyes {
+    width: 100px;
+    height: 40px;
+    background-color: #2D2D2D;
+    margin: 0 auto;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -50px;
+    border-radius: 40px;
+}
+
+#head #eyes #left-eye,
+#head #eyes #right-eye {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    background-color: white;
+    position: absolute;
+    top: 9px;
+    left: 20px;
+
+    animation-name: eyesAnim;
+    animation-timing-function: linear;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#head #eyes #right-eye {
+    left: 60px;
+}
+
+#head #left-antenna {
+    width: 12px;
+    height: 6px;
+    background-color: #7F8C8D;
+    position: absolute;
+    top: 50px;
+    left: -12px;
+}
+
+#head #left-antenna:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 20px;
+    background-color: #D0D3D4;
+    position: absolute;
+    left: -5px;
+    top: -7px;
+    border-radius: 4px;
+}
+
+#head #right-antenna {
+    width: 12px;
+    height: 6px;
+    background-color: #7F8C8D;
+    position: absolute;
+    top: 50px;
+    right: -12px;
+}
+
+#head #right-antenna:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 20px;
+    background-color: #D0D3D4;
+    position: absolute;
+    left: 7px;
+    top: -7px;
+    border-radius: 4px;
+}
+
+button {
+    width: 215px;
+    background-color: gold;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    margin: 7px 4px;
+    box-shadow: 0 3px 0 ;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    font-size: 14px;
+    position: relative;
+    color: #ff0000;
+    transition: All 100ms ease;
+    top: 0px;
+}
+
+button:hover {
+    background-color: #58b368;
+}
+
+button:active {
+    top: 3px;
+    position: relative;
+    box-shadow: none;
+    transition: All 100ms ease;
+}
